@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tejas Ramanujam — Five Living Machines · Live Demos</title>
+<meta name="description" content="A living catalogue of five live, interactive demos by Tejas Ramanujam: a generative drafting-sheet portfolio, a Gemini voice assistant, a CS project archive, a second brain with a knowledge graph, and a real-time collaborative whiteboard. Nothing here is a screenshot." />
+<link rel="canonical" href="https://tejas-live-demos.vercel.app/" />
+<meta name="theme-color" content="#EFE9DE" />
+
+<meta property="og:title" content="Tejas Ramanujam — Five Living Machines" />
+<meta property="og:description" content="A living catalogue of five live software demos: draw, search, create, or talk. Everything is running right now." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://tejas-live-demos.vercel.app/" />
+<meta property="og:image" content="https://tejas-live-demos.vercel.app/assets/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Tejas Ramanujam — Five Living Machines" />
+<meta name="twitter:description" content="Five live, interactive software demos. Nothing here is a screenshot." />
+<meta name="twitter:image" content="https://tejas-live-demos.vercel.app/assets/og.png" />
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,100..900,0..100,0..1&family=Space+Mono:ital,wght@0,400;0,700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+<a class="skip" href="#index">Skip to the specimen index</a>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="bar">
+  <span>Tejas&nbsp;Ramanujam</span>
+  <span class="bar-mid" aria-hidden="true">Index of Live Software · UT Dallas ’27</span>
+  <span class="bar-live"><span class="dot" aria-hidden="true"></span><a href="https://github.com/TejasRamanujam">GitHub&nbsp;↗&#xFE0E;</a></span>
+</header>
+
+<main>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero in" aria-labelledby="kinetic">
+    <p class="over reveal" style="--d:.05s">Specimen index · 01–05 · all systems running</p>
+    <h1 id="kinetic" class="reveal" style="--d:.15s">Five <em>living</em> machines</h1>
+    <p class="lede reveal" style="--d:.3s">
+      I’m Tejas Ramanujam — software engineer, UT Dallas ’27. I build AI systems and
+      full-stack products, and I don’t ship screenshots: <strong>every figure in this
+      catalogue is live software.</strong> Draw on it. Search it. Talk to it.
+    </p>
+    <div class="vitals reveal" style="--d:.45s" aria-hidden="true">
+      <span class="vlive">● LIVE</span>
+      <span>LOCAL <b id="v-clock">--:--:--</b></span>
+      <span>FRAME <b id="v-fps">—</b>/s</span>
+      <span>CURSOR <b id="v-cursor">—</b></span>
+      <span>VIEWPORT <b id="v-view">—</b></span>
+    </div>
+    <a class="cue reveal" style="--d:.55s" href="#index">Open the catalogue <span class="arr" aria-hidden="true">↓</span></a>
+  </section>
+
+  <!-- ================= INDEX ================= -->
+  <nav class="index" id="index" data-reveal aria-label="Specimen index">
+    <p class="sec-label reveal">§ Catalogue of specimens</p>
+    <div class="ix-head reveal" style="--d:.08s" aria-hidden="true">
+      <span>No.</span><span>Specimen</span><span class="ix-genus">Genus</span><span class="ix-stack">Stack</span>
+    </div>
+    <a class="ix-row reveal" style="--d:.14s" href="#plate-1">
+      <span class="ix-no">01</span>
+      <span class="ix-name">Portfolio</span>
+      <span class="ix-genus">Generative portfolio</span>
+      <span class="ix-stack">React · Vite · Canvas 2D</span>
+    </a>
+    <a class="ix-row reveal" style="--d:.2s" href="#plate-2">
+      <span class="ix-no">02</span>
+      <span class="ix-name">Connection</span>
+      <span class="ix-genus">Voice intelligence</span>
+      <span class="ix-stack">Next.js · Gemini · WebGL</span>
+    </a>
+    <a class="ix-row reveal" style="--d:.26s" href="#plate-3">
+      <span class="ix-no">03</span>
+      <span class="ix-name">Neuron</span>
+      <span class="ix-genus">Project archive</span>
+      <span class="ix-stack">React · FastAPI · Neon</span>
+    </a>
+    <a class="ix-row reveal" style="--d:.32s" href="#plate-4">
+      <span class="ix-no">04</span>
+      <span class="ix-name">Neurosurge</span>
+      <span class="ix-genus">Second brain</span>
+      <span class="ix-stack">React · FastAPI · pgvector</span>
+    </a>
+    <a class="ix-row reveal" style="--d:.38s" href="#plate-5">
+      <span class="ix-no">05</span>
+      <span class="ix-name">Scribbly</span>
+      <span class="ix-genus">Shared canvas</span>
+      <span class="ix-stack">React · Liveblocks · FastAPI</span>
+    </a>
+  </nav>
+
+  <!-- ================= PLATE 01 ================= -->
+  <section class="plate" id="plate-1" data-reveal aria-labelledby="h-plate-1">
+    <div class="fig-wrap">
+      <div class="fig fig-reveal"><canvas data-scene="flow" aria-hidden="true"></canvas></div>
+      <p class="fig-cap reveal" style="--d:.3s">
+        <span>Fig. 01 — flow field · move your cursor; the pen bends around it</span>
+        <span class="live">● live</span>
+      </p>
+    </div>
+    <div class="plate-body">
+      <p class="plate-no reveal" aria-hidden="true">01</p>
+      <p class="genus reveal" style="--d:.08s">§ Generative portfolio</p>
+      <h2 id="h-plate-1" class="reveal" style="--d:.14s">Portfolio</h2>
+      <p class="desc reveal" style="--d:.2s">
+        A personal portfolio staged as an engineer’s drafting sheet: a flow-field pen
+        plotter draws the canvas in real time while variable-font kinetic typography
+        sets the titles. The résumé as a living blueprint.
+      </p>
+      <ul class="stack reveal" style="--d:.26s">
+        <li>React</li><li>Vite</li><li>Canvas 2D</li>
+      </ul>
+      <a class="cta reveal" style="--d:.32s" href="https://tejas-suminagashi.vercel.app">Enter the drawing <span class="x" aria-hidden="true">↗&#xFE0E;</span></a>
+      <span class="url reveal" style="--d:.38s">tejas-suminagashi.vercel.app</span>
+    </div>
+  </section>
+
+  <!-- ================= PLATE 02 ================= -->
+  <section class="plate" id="plate-2" data-reveal aria-labelledby="h-plate-2">
+    <div class="fig-wrap">
+      <div class="fig fig-reveal"><canvas data-scene="orb" aria-hidden="true"></canvas></div>
+      <p class="fig-cap reveal" style="--d:.3s">
+        <span>Fig. 02 — resonance · it stirs when your cursor comes close</span>
+        <span class="live">● live</span>
+      </p>
+    </div>
+    <div class="plate-body">
+      <p class="plate-no reveal" aria-hidden="true">02</p>
+      <p class="genus reveal" style="--d:.08s">§ Voice intelligence</p>
+      <h2 id="h-plate-2" class="reveal" style="--d:.14s">Connection</h2>
+      <p class="desc reveal" style="--d:.2s">
+        An AI voice assistant built on Gemini: chat with tool-calling, a wake word
+        with full Web Speech voice I/O, a WebGL shader orb, and a full-screen
+        voice mode.
+      </p>
+      <p class="fieldnote reveal" style="--d:.24s">
+        Field note — voice wants a Chrome or Edge microphone; the text box works everywhere.
+      </p>
+      <ul class="stack reveal" style="--d:.28s">
+        <li>Next.js</li><li>Gemini</li><li>Web Speech</li><li>WebGL</li>
+      </ul>
+      <a class="cta reveal" style="--d:.34s" href="https://tejas-voice-assistant.vercel.app">Start talking <span class="x" aria-hidden="true">↗&#xFE0E;</span></a>
+      <span class="url reveal" style="--d:.4s">tejas-voice-assistant.vercel.app</span>
+    </div>
+  </section>
+
+  <!-- ================= PLATE 03 ================= -->
+  <section class="plate" id="plate-3" data-reveal aria-labelledby="h-plate-3">
+    <div class="fig-wrap">
+      <div class="fig fig-reveal"><canvas data-scene="grid" aria-hidden="true"></canvas></div>
+      <p class="fig-cap reveal" style="--d:.3s">
+        <span>Fig. 03 — retrieval · the archive querying itself</span>
+        <span class="live">● live</span>
+      </p>
+    </div>
+    <div class="plate-body">
+      <p class="plate-no reveal" aria-hidden="true">03</p>
+      <p class="genus reveal" style="--d:.08s">§ Project archive</p>
+      <h2 id="h-plate-3" class="reveal" style="--d:.14s">Neuron</h2>
+      <p class="desc reveal" style="--d:.2s">
+        A searchable database of CS project ideas, each with a full build plan —
+        difficulty filters, a tag sidebar, and instant search across the whole
+        archive.
+      </p>
+      <ul class="stack reveal" style="--d:.26s">
+        <li>React</li><li>FastAPI</li><li>Neon Postgres</li>
+      </ul>
+      <a class="cta reveal" style="--d:.32s" href="https://tejas-project-database.vercel.app">Search the archive <span class="x" aria-hidden="true">↗&#xFE0E;</span></a>
+      <span class="url reveal" style="--d:.38s">tejas-project-database.vercel.app</span>
+    </div>
+  </section>
+
+  <!-- ================= PLATE 04 ================= -->
+  <section class="plate" id="plate-4" data-reveal aria-labelledby="h-plate-4">
+    <div class="fig-wrap">
+      <div class="fig fig-reveal"><canvas data-scene="graph" aria-hidden="true"></canvas></div>
+      <p class="fig-cap reveal" style="--d:.3s">
+        <span>Fig. 04 — cortex · bring your cursor near; the graph reaches back</span>
+        <span class="live">● live</span>
+      </p>
+    </div>
+    <div class="plate-body">
+      <p class="plate-no reveal" aria-hidden="true">04</p>
+      <p class="genus reveal" style="--d:.08s">§ Second brain</p>
+      <h2 id="h-plate-4" class="reveal" style="--d:.14s">Neurosurge</h2>
+      <p class="desc reveal" style="--d:.2s">
+        Notes with wikilinks and hashtags feeding a force-directed knowledge graph,
+        spaced-repetition flashcards, Gemini-embedding semantic search, and
+        PDF/DOCX import.
+      </p>
+      <ul class="stack reveal" style="--d:.26s">
+        <li>React</li><li>FastAPI</li><li>Neon + pgvector</li><li>Gemini</li>
+      </ul>
+      <a class="cta reveal" style="--d:.32s" href="https://tejas-neurosurge.vercel.app">Open the graph <span class="x" aria-hidden="true">↗&#xFE0E;</span></a>
+      <span class="url reveal" style="--d:.38s">tejas-neurosurge.vercel.app</span>
+    </div>
+  </section>
+
+  <!-- ================= PLATE 05 ================= -->
+  <section class="plate" id="plate-5" data-reveal aria-labelledby="h-plate-5">
+    <div class="fig-wrap">
+      <div class="fig fig-reveal"><canvas data-scene="chorus" aria-hidden="true"></canvas></div>
+      <p class="fig-cap reveal" style="--d:.3s">
+        <span>Fig. 05 — chorus · four ghosts are drawing; your cursor joins them</span>
+        <span class="live">● live</span>
+      </p>
+    </div>
+    <div class="plate-body">
+      <p class="plate-no reveal" aria-hidden="true">05</p>
+      <p class="genus reveal" style="--d:.08s">§ Shared canvas</p>
+      <h2 id="h-plate-5" class="reveal" style="--d:.14s">Scribbly</h2>
+      <p class="desc reveal" style="--d:.2s">
+        A collaborative whiteboard: real-time multi-user drawing with live cursors
+        over Liveblocks, persistent stroke history with timeline replay, and
+        SVG/PNG export.
+      </p>
+      <ul class="stack reveal" style="--d:.26s">
+        <li>React</li><li>Canvas</li><li>Liveblocks</li><li>FastAPI</li><li>Neon</li>
+      </ul>
+      <a class="cta reveal" style="--d:.32s" href="https://tejas-whiteboard.vercel.app">Draw with them <span class="x" aria-hidden="true">↗&#xFE0E;</span></a>
+      <span class="url reveal" style="--d:.38s">tejas-whiteboard.vercel.app</span>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer data-reveal>
+  <p class="foot-big reveal">
+    The rest of the projects are on <a href="https://github.com/TejasRamanujam">GitHub&nbsp;↗&#xFE0E;</a>.
+  </p>
+  <div class="colophon reveal" style="--d:.15s">
+    <p>
+      Tejas Ramanujam · software engineer · UT Dallas ’27 · builds AI systems &amp; full-stack products
+    </p>
+    <p class="keys" aria-hidden="true">
+      J / K — next / previous specimen &middot; 1&ndash;5 — jump
+    </p>
+  </div>
+</footer>
+
+<script src="/app.js" defer></script>
+</body>
+</html>
