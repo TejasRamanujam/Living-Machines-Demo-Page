@@ -1,0 +1,25 @@
+name: Keep demo backends warm
+
+# Serverless functions on the free tier cold-start after idle; recruiters
+# clicking a demo shouldn't wait for that. Ping every 10 minutes.
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping demo endpoints
+        run: |
+          for url in \
+            "https://scribbly-collab.vercel.app/api/boards" \
+            "https://neurosurge.vercel.app/api/notes" \
+            "https://neuron-database.vercel.app/api/projects" \
+            "https://connection-assistant.vercel.app/" \
+            "https://tejasramanujam.vercel.app/" \
+            "https://tejas-live-demos.vercel.app/"; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 30 "$url" || echo timeout)
+            echo "$url -> $code"
+          done
