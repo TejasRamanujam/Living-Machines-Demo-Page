@@ -2,6 +2,12 @@ name: Keep demo backends warm
 
 # Serverless functions on the free tier cold-start after idle; recruiters
 # clicking a demo shouldn't wait for that. Ping every 10 minutes.
+#
+# Deliberately hits /api/warmup — a route that 404s WITHOUT a database
+# query — so the Python/Next functions stay hot while the Neon database
+# autosuspends normally (keeping it awake 24/7 would blow the free
+# tier's compute-hour quota). Liveblocks is untouched: plain HTTP never
+# joins a room.
 on:
   schedule:
     - cron: '*/10 * * * *'
@@ -14,9 +20,9 @@ jobs:
       - name: Ping demo endpoints
         run: |
           for url in \
-            "https://scribbly-collab.vercel.app/api/boards" \
-            "https://neurosurge.vercel.app/api/notes" \
-            "https://neuron-database.vercel.app/api/projects" \
+            "https://scribbly-collab.vercel.app/api/warmup" \
+            "https://neurosurge.vercel.app/api/warmup" \
+            "https://neuron-database.vercel.app/api/warmup" \
             "https://connection-assistant.vercel.app/" \
             "https://tejasramanujam.vercel.app/" \
             "https://tejas-live-demos.vercel.app/"; do
