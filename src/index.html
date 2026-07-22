@@ -3,19 +3,19 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Tejas Ramanujam — Five Living Machines · Live Demos</title>
-<meta name="description" content="A living catalogue of five live, interactive demos by Tejas Ramanujam: a generative drafting-sheet portfolio, a Gemini voice assistant, a CS project archive, a second brain with a knowledge graph, and a real-time collaborative whiteboard. Nothing here is a screenshot." />
+<title>Tejas Ramanujam — Six Living Machines · Live Demos</title>
+<meta name="description" content="A living catalogue of six live, interactive demos by Tejas Ramanujam: a generative portfolio, a Gemini voice assistant, a CS project archive, a knowledge graph, a collaborative whiteboard, and a Gemini-directed WebGL field. Nothing here is a screenshot." />
 <link rel="canonical" href="https://tejas-live-demos.vercel.app/" />
 <meta name="theme-color" content="#EFE9DE" />
 
-<meta property="og:title" content="Tejas Ramanujam — Five Living Machines" />
-<meta property="og:description" content="A living catalogue of five live software demos: draw, search, create, or talk. Everything is running right now." />
+<meta property="og:title" content="Tejas Ramanujam — Six Living Machines" />
+<meta property="og:description" content="A living catalogue of six live software demos: draw, search, create, describe, or talk. Everything is running right now." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://tejas-live-demos.vercel.app/" />
 <meta property="og:image" content="https://tejas-live-demos.vercel.app/assets/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Tejas Ramanujam — Five Living Machines" />
-<meta name="twitter:description" content="Five live, interactive software demos. Nothing here is a screenshot." />
+<meta name="twitter:title" content="Tejas Ramanujam — Six Living Machines" />
+<meta name="twitter:description" content="Six live, interactive software demos. Nothing here is a screenshot." />
 <meta name="twitter:image" content="https://tejas-live-demos.vercel.app/assets/og.png" />
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -39,8 +39,8 @@
 
   <!-- ================= HERO ================= -->
   <section class="hero in" aria-labelledby="kinetic">
-    <p class="over reveal" style="--d:.05s">Specimen index · 01–05 · all systems running</p>
-    <h1 id="kinetic" class="reveal" style="--d:.15s">Five <em>living</em> machines</h1>
+    <p class="over reveal" style="--d:.05s">Specimen index · 01–06 · all systems running</p>
+    <h1 id="kinetic" class="reveal" style="--d:.15s">Six <em>living</em> machines</h1>
     <p class="lede reveal" style="--d:.3s">
       I’m Tejas Ramanujam — software engineer, UT Dallas ’27. I build AI systems and
       full-stack products, and I don’t ship screenshots: <strong>every figure in this
@@ -91,6 +91,12 @@
       <span class="ix-name">Scribbly</span>
       <span class="ix-genus">Shared canvas</span>
       <span class="ix-stack">React · Liveblocks · FastAPI</span>
+    </a>
+    <a class="ix-row reveal" style="--d:.44s" href="#plate-6">
+      <span class="ix-no">06</span>
+      <span class="ix-name">Latent Field</span>
+      <span class="ix-genus">Generative field</span>
+      <span class="ix-stack">WebGL · Gemini · Vercel</span>
     </a>
   </nav>
 
@@ -227,6 +233,32 @@
     </div>
   </section>
 
+  <!-- ================= PLATE 06 ================= -->
+  <section class="plate" id="plate-6" data-reveal aria-labelledby="h-plate-6">
+    <div class="fig-wrap">
+      <div class="fig fig-reveal"><canvas data-scene="latent" aria-hidden="true"></canvas></div>
+      <p class="fig-cap reveal" style="--d:.3s">
+        <span>Fig. 06 — latent field · move through it; the current bends around you</span>
+        <span class="live">● live</span>
+      </p>
+    </div>
+    <div class="plate-body">
+      <p class="plate-no reveal" aria-hidden="true">06</p>
+      <p class="genus reveal" style="--d:.08s">§ Generative field</p>
+      <h2 id="h-plate-6" class="reveal" style="--d:.14s">Latent Field</h2>
+      <p class="desc reveal" style="--d:.2s">
+        Describe a feeling and Gemini returns structured rendering parameters —
+        palette, turbulence, warp, speed, scale, and glow — that a hand-written
+        WebGL field smoothly interpolates into motion.
+      </p>
+      <ul class="stack reveal" style="--d:.26s">
+        <li>WebGL</li><li>GLSL</li><li>Gemini</li><li>Vercel Functions</li>
+      </ul>
+      <a class="cta reveal" style="--d:.32s" href="https://latent-field.vercel.app">Describe a feeling <span class="x" aria-hidden="true">↗&#xFE0E;</span></a>
+      <span class="url reveal" style="--d:.38s">latent-field.vercel.app</span>
+    </div>
+  </section>
+
 </main>
 
 <!-- ================= FOOTER ================= -->
@@ -239,7 +271,7 @@
       Tejas Ramanujam · software engineer · UT Dallas ’27 · builds AI systems &amp; full-stack products
     </p>
     <p class="keys" aria-hidden="true">
-      J / K — next / previous specimen &middot; 1&ndash;5 — jump
+      J / K — next / previous specimen &middot; 1&ndash;6 — jump
     </p>
   </div>
 </footer>
