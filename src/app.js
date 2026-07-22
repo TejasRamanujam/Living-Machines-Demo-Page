@@ -1,6 +1,6 @@
 /* ============================================================
    THE LIVING CATALOGUE — engine
-   Five live Canvas 2D simulacra, one RAF, honest about frames:
+   Six live Canvas 2D simulacra, one RAF, honest about frames:
    DPR capped at 2, offscreen scenes fully paused, reduced-motion
    renders a single settled frame per figure.
    ============================================================ */
@@ -519,9 +519,60 @@ class Chorus extends Scene {
 }
 
 /* ============================================================
+   06 · LATENT — a prompt-directed feeling field
+   ============================================================ */
+class Latent extends Scene {
+  frame(){
+    const c = this.ctx;
+    this.clear();
+    c.lineCap = 'round';
+
+    const lines = Math.max(28, Math.min(64, Math.round(this.h / 7)));
+    const steps = Math.max(56, Math.min(110, Math.round(this.w / 7)));
+    const dx = (this.w + 24) / steps;
+
+    for (let row = 0; row < lines; row++){
+      let x = -12;
+      let y = (row + .5) * this.h / lines;
+      c.beginPath();
+      c.moveTo(x, y);
+
+      for (let step = 0; step <= steps; step++){
+        const noise = fbm(x * .006 + this.t * .035, y * .008 - this.t * .02);
+        let angle = (noise - .5) * 3.8 + Math.sin(row * .37 + this.t * .45) * .18;
+
+        if (this.pin){
+          const px = this.px - x, py = this.py - y;
+          const distance = Math.hypot(px, py);
+          if (distance < 150){
+            angle += Math.atan2(py, px) * (1 - distance / 150) * .32;
+          }
+        }
+
+        x += dx;
+        y += Math.sin(angle) * 2.8;
+        c.lineTo(x, y);
+      }
+
+      c.strokeStyle = row % 9 === 0 ? accentA(.7) : inkA(.18 + (row % 4) * .07);
+      c.lineWidth = row % 9 === 0 ? 1.35 : .8;
+      c.stroke();
+    }
+
+    const glowX = this.pin ? this.px : this.w * (.5 + .26 * Math.cos(this.t * .28));
+    const glowY = this.pin ? this.py : this.h * (.5 + .2 * Math.sin(this.t * .22));
+    const glow = c.createRadialGradient(glowX, glowY, 0, glowX, glowY, Math.max(70, this.w * .2));
+    glow.addColorStop(0, accentA(.12));
+    glow.addColorStop(1, accentA(0));
+    c.fillStyle = glow;
+    c.fillRect(0, 0, this.w, this.h);
+  }
+}
+
+/* ============================================================
    Orchestration
    ============================================================ */
-const SCENES = { flow: Flow, orb: Orb, grid: Grid, graph: Graph, chorus: Chorus };
+const SCENES = { flow: Flow, orb: Orb, grid: Grid, graph: Graph, chorus: Chorus, latent: Latent };
 const scenes = [];
 const COARSE = matchMedia('(pointer: coarse)').matches;
 
@@ -687,7 +738,7 @@ if (document.fonts && document.fonts.ready){
 })();
 
 
-/* ---------- plate navigation hotkeys: J/K next-prev, 1-5 jump ---------- */
+/* ---------- plate navigation hotkeys: J/K next-prev, 1-6 jump ---------- */
 (() => {
   const plates = [...document.querySelectorAll('section.plate')];
   if (!plates.length) return;
